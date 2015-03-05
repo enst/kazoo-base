@@ -12,6 +12,7 @@ RUN mkdir -p /srv /var/log/bigcouch
 RUN mkdir -p /var/log/freeswitch
 RUN mkdir -p /opt/kazoo/ /var/log/2600hz
 RUN mkdir -p /var/log/kamailio
+RUN mkdir -p /var/log/httpd
 
 RUN chown bigcouch:daemon /srv /var/log/bigcouch -R
 RUN chown freeswitch:daemon /var/log/freeswitch -R
