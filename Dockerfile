@@ -1,7 +1,7 @@
 FROM centos:6
 MAINTAINER Bing Li <enst.bupt@gmail.com>
 
-RUN useradd -r -g daemon bigcouch
+RUN useradd -r -g daemon -d /srv bigcouch
 RUN useradd -r -g daemon freeswitch
 RUN useradd -r -g daemon -d /opt/kazoo kazoo
 RUN groupadd -r kamailio && useradd -r -g kamailio kamailio
