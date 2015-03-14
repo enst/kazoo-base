@@ -22,6 +22,10 @@ RUN chown freeswitch:daemon /var/log/freeswitch -R
 RUN chown kazoo:daemon /opt/kazoo /var/log/2600hz -R
 RUN chown kamailio:kamailio /var/log/kamailio -R
 
-VOLUME ["/srv", "/etc/kazoo", "/var/lib/rabbitmq/", /var/log", "/opt/kazoo/log"]
+VOLUME /srv
+VOLUME /etc/kazoo
+VOLUME /var/lib/rabbitmq/
+VOLUME /var/log
+VOLUME /opt/kazoo/log"
 
 WORKDIR /opt/kazoo
