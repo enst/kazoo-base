@@ -24,8 +24,8 @@ RUN chown kamailio:kamailio /var/log/kamailio -R
 
 VOLUME /srv
 VOLUME /etc/kazoo
-VOLUME /var/lib/rabbitmq/
+VOLUME /var/lib/rabbitmq
 VOLUME /var/log
-VOLUME /opt/kazoo/log"
+VOLUME /opt/kazoo/log
 
 WORKDIR /opt/kazoo
