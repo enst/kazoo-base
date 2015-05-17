@@ -18,10 +18,10 @@ RUN mkdir -p /srv /var/log/bigcouch \
     /var/log/httpd
 
 RUN chown bigcouch:daemon /srv /var/log/bigcouch -R \
-    && rabbitmq:daemon /var/lib/rabbitmq/ -R \
-    && freeswitch:daemon /var/log/freeswitch -R \
-    && kazoo:daemon /opt/kazoo /var/log/2600hz -R \
-    &&kamailio:kamailio /var/log/kamailio -R
+    && chown rabbitmq:daemon /var/lib/rabbitmq/ -R \
+    && chown freeswitch:daemon /var/log/freeswitch -R \
+    && chown kazoo:daemon /opt/kazoo /var/log/2600hz -R \
+    && chown kamailio:kamailio /var/log/kamailio -R
 
 VOLUME /srv
 VOLUME /etc/kazoo
