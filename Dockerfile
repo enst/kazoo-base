@@ -23,9 +23,5 @@ RUN chown bigcouch:daemon /srv /var/log/bigcouch -R \
     && chown kazoo:daemon /opt/kazoo /var/log/2600hz -R \
     && chown kamailio:kamailio /var/log/kamailio -R
 
-VOLUME /srv
-VOLUME /etc/kazoo
-VOLUME /var/log
-VOLUME /opt/kazoo/log
-
+VOLUME ["/srv", "/etc/kazoo", "/opt/kazoo/log"]
 WORKDIR /opt/kazoo
